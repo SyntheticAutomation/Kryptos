@@ -1,4 +1,4 @@
-class Coin
+class Siacoin
 
   attr_reader :name, :usd_value, :image_url, :seven_day_change, :miners
 
@@ -10,10 +10,10 @@ class Coin
     @miners = miners[:totalMiners]
   end
 
-  def self.get_siacoin
+  def self.genesis
     coin_search = CoinGeckoService.retrieve_siacoin
     miners = LuxorService.retrieve_miners
-    Coin.new(coin_search, miners)
+    new(coin_search, miners)
   end
 
 end

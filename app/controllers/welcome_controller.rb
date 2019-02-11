@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
-    @sc = Coin.get_siacoin
+    @sc = Siacoin.genesis
     @last_week = @sc.seven_day_change[0..3].to_f
     value = @sc.usd_value
     if value < 0.01

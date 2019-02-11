@@ -1,0 +1,38 @@
+<div class="ui divided items">
+  <div class="item">
+    <div class="image">
+      <img src="<%= @sc.image_url %>" alt="image">
+    </div>
+    <div class=" middle aligned content">
+      <a class="header"><%= @sc.name %></a>
+      <div class="meta">
+        <span class="cinema">Price: <%= @price %></span>
+        <BR></BR>
+        <% if @last_week.positive? %>
+          <span class="cinema">7d change: <i class="arrow green alternate circle up outline icon"></i><%= @last_week %>%</span>
+        <% else %>
+          <span class="cinema">7d change: <i class="arrow red alternate circle down outline icon"></i><%= @last_week %>%</span>
+        <% end %>
+        <BR></BR>
+        <%= form_tag calculate_value_path, method: :get do |form| %>
+          <div class="ui form">
+            <div class="inline field">
+              <%= label_tag 'Number_of_coins' %>
+              <%= text_field_tag 'coin_input', nil, placeholder: 'Enter # of coins' %>
+              <%= submit_tag 'Calculate' %>
+            </div>
+          </div>
+        <% end %>
+        <% if @result %>
+          <div class="ui statistic">
+            <div class="value">
+              <%= @result %> USD
+            </div>
+            <div class="label">
+              value of your coins
+            </div>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>

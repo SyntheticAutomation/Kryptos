@@ -19,6 +19,8 @@ gem 'capybara'
 gem 'semantic-ui-sass'
 gem 'jquery-rails'
 gem 'bundler'
+gem 'nokogiri'
+gem 'watir'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

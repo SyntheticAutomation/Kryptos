@@ -8,6 +8,8 @@
       <div class="meta">
         <span class="cinema">Price: <%= @price %></span>
         <BR></BR>
+        <span class="cinema">Miners: <%= @sc.miners %></span>
+        <BR></BR>
         <% if @last_week.positive? %>
           <span class="cinema">7d change: <i class="arrow green alternate circle up outline icon"></i><%= @last_week %>%</span>
         <% else %>

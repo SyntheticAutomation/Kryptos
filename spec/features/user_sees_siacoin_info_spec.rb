@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "A visitor to our site" do
   it 'can see siacoin information' do
     visit '/'
-    expect(page).to have_content("")
+    expect(page).to have_content("miners")
   end
 end
 

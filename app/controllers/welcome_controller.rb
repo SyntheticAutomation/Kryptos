@@ -16,4 +16,11 @@ class WelcomeController < ApplicationController
     end
   end
 
+  def refresh
+    @data = index
+    respond_to do |format|
+      format.js
+    end
+  end
+
 end

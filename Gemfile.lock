@@ -111,6 +111,7 @@ GEM
     msgpack (1.2.6)
     multi_json (1.13.1)
     multipart-post (2.0.0)
+    net_http_ssl_fix (0.0.10)
     nio4r (2.3.1)
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
@@ -216,6 +217,11 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webdrivers (3.6.0)
+      net_http_ssl_fix
+      nokogiri (~> 1.6)
+      rubyzip (~> 1.0)
+      selenium-webdriver (~> 3.0)
     webmock (3.5.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -255,6 +261,7 @@ DEPENDENCIES
   vcr
   watir
   web-console (>= 3.3.0)
+  webdrivers
   webmock
 
 RUBY VERSION

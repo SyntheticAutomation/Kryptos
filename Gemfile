@@ -21,6 +21,7 @@ gem 'jquery-rails'
 gem 'bundler'
 gem 'nokogiri'
 gem 'watir'
+gem 'webdrivers'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

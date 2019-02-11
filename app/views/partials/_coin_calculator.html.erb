@@ -1,10 +1,9 @@
-<% if @result %>
-  <div class="ui statistic">
-    <div class="value">
-      <%= @result %> USD
-    </div>
-    <div class="label">
-      value of your coins
+<%= form_tag calculate_value_path, method: :get do |form| %>
+  <div class="ui form">
+    <div class="inline field">
+      <%= label_tag 'Number_of_coins' %>
+      <%= text_field_tag 'coin_input', nil, placeholder: 'Enter # of coins' %>
+      <%= submit_tag 'Calculate' %>
     </div>
   </div>
 <% end %>

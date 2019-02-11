@@ -18,7 +18,7 @@ class LuxorScraper
   end
 
   def find_72_hr_rewards
-    last_3_day_rewards = scrape.css('ul')[4].children[4].children[1].children[0].to_s.chomp(" SC").to_f
+    scrape.css('ul')[4].children[4].children[1].children[0].to_s.chomp(" SC").to_f
   end
 
   def daily_earnings

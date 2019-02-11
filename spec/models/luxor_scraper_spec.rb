@@ -8,7 +8,6 @@ describe LuxorScraper, type: :model do
   before(:each) do
     wallet = ENV['sc_wallet']
     @lux = LuxorScraper.new(wallet)
-    @daily_earnings = @lux.daily_earnings
   end
 
   it 'exists' do
@@ -18,7 +17,7 @@ describe LuxorScraper, type: :model do
   describe 'instance methods' do
 
     it '.daily_earnings' do
-      expect(@daily_earnings.is_a?(Float)).to eq(true)
+      expect(@lux.daily_earnings.is_a?(Float)).to eq(true)
     end
   end
 end

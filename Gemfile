@@ -18,6 +18,7 @@ gem 'rspec-rails'
 gem 'capybara'
 gem 'semantic-ui-sass'
 gem 'jquery-rails'
+gem 'bundler'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -25,16 +25,7 @@
             </div>
           </div>
         <% end %>
-        <% if @result %>
-          <div class="ui statistic">
-            <div class="value">
-              <%= @result %> USD
-            </div>
-            <div class="label">
-              value of your coins
-            </div>
-          </div>
-        <% end %>
+        <%= render 'partials/coin_calculator' %>
     </div>
   </div>
 </div>
